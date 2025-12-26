@@ -1,15 +1,25 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+// import { Geist, Geist_Mono } from "next/font/google";
+import { Plus_Jakarta_Sans } from "next/font/google";
+import Navbar from "@/components/layout/NavBar"
+import Footer from "@/components/layout/FooTer"
+// import type { ReactNode } from "react"
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
+// const geistSans = Geist({
+//   variable: "--font-geist-sans",
+//   subsets: ["latin"],
+// });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+// const geistMono = Geist_Mono({
+//   variable: "--font-geist-mono",
+//   subsets: ["latin"],
+// });
+
+const jakartaSans = Plus_Jakarta_Sans({
+  subsets: ['latin'], // Or other subsets if needed
+  weight: ['400', '700'], // Specify weights you'll use (e.g., Normal, Bold)
+  variable: '--font-jakarta-sans', // Optional: for CSS variables
 });
 
 export const metadata: Metadata = {
@@ -23,12 +33,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+   <html lang="en" className={jakartaSans.variable}>
+      <body className="min-h-screen flex flex-col bg-background text-foreground dark:bg-gray-950 scheme-light dark:scheme-dark">
+        <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
-  );
+    );
 }

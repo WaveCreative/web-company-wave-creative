@@ -1,19 +1,18 @@
-import Image from "next/image";
-import type { ReactNode } from "react"
-import Navbar from "@/components/layout/Navbar"
-import Footer from "@/components/layout/Footer"
+import Hero from "@/components/sections/Hero";
+import Tentang from "@/components/sections/Tentang";
+import Portofolio from "@/components/sections/Porto";
+import Layanan from "@/components/sections/Service";
+import Hubungi from "@/components/sections/Hubungi";
 import "./globals.css"
 
-export default function Home({
-  children, 
-}: {
-  children: ReactNode
-}) {
+export default function HomePage( ) {
   return (
-    <body>
-      <Navbar />
-      isi homepage lu di sini
-      <Footer />
-    </body>
+    <main>
+      <Hero />
+      <Tentang />
+      <Portofolio />
+      <Layanan />
+      <Hubungi />
+    </main>
   );
 }
