@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 // import { Geist, Geist_Mono } from "next/font/google";
 import { Plus_Jakarta_Sans } from "next/font/google";
-import Navbar from "@/components/layout/NavBar"
-import Footer from "@/components/layout/FooTer"
+import Navbar from "@/components/layout/Navbar"
+import Footer from "@/components/layout/Footer"
 // import type { ReactNode } from "react"
 import "./globals.css";
 

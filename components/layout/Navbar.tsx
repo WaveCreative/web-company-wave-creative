@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-export default function NavBar() {
+export default function Nav() {
   return (
     <div className="flex items-center justify-between p-4 bg-white ">
       <Link href="/" aria-label="Home">
