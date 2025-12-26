@@ -116,6 +116,10 @@
   --sidebar-ring: oklch(0.556 0 0);
 }
 
+:root {
+  --font-jakarta-sans: 'Plus Jakarta Sans', sans-serif;
+}
+
 @layer base {
   * {
     @apply border-border outline-ring/50;
@@ -123,7 +127,18 @@
   body {
     @apply bg-background text-foreground;
   }
-  h1, h2, h3, h4, h5, h6 {
+}
+
+@layer base {
+  html {
+    font-family: var(--font-jakarta-sans), sans-serif;
+  }
+    h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-jakarta-sans);
+  }
+}
+@layer components {
+  .btn {
+    @apply px-4 py-2 rounded-md bg-primary text-primary-foreground hover:bg-primary/90 transition;
   }
 }

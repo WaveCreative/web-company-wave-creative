@@ -2,8 +2,8 @@ import Link from "next/link";
 
 export default function Nav() {
   return (
-    <div className="flex items-center justify-between p-4 bg-white ">
-      <Link href="/" aria-label="Home">
+    <div className="flex items-center justify-between p-4 shadow-sm">
+      <Link href="/" aria-label="Home" className="flex items-center gap-4">
         <svg
           className="ml-15"
           width="48"
@@ -37,7 +37,7 @@ export default function Nav() {
             />
           </defs>
         </svg>
-        
+          <div className="text-3xl text-[#D40A35] font-bold">Wave Creative</div>
       </Link>
       <nav className="flex space-x-4">
         <Link href="Hero" className="hover:text-[#D40A35]">

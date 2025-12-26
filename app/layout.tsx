@@ -18,8 +18,8 @@ import "./globals.css";
 
 const jakartaSans = Plus_Jakarta_Sans({
   subsets: ['latin'], // Or other subsets if needed
-  weight: ['400', '700'], // Specify weights you'll use (e.g., Normal, Bold)
-  variable: '--font-jakarta-sans', // Optional: for CSS variables
+  weight: ['400', '700'],
+  variable: '--font-jakarta-sans', 
 });
 
 export const metadata: Metadata = {
@@ -34,7 +34,7 @@ export default function RootLayout({
 }>) {
   return (
    <html lang="en" className={jakartaSans.variable}>
-      <body className="min-h-screen flex flex-col bg-background text-foreground dark:bg-gray-950 scheme-light dark:scheme-dark">
+      <body className="font-sans min-h-screen flex flex-col bg-background text-foreground dark:bg-gray-950 scheme-light dark:scheme-dark">
         <Navbar />
         {children}
         <Footer />
